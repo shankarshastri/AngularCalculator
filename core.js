@@ -35,7 +35,13 @@ app.controller('angularCalcController', ['$scope', '$http', function($scope, $ht
     };
 
     $scope.calcOutput = function() {
-        $scope.Output = eval($scope.Output);
+      var temp = 0;
+        try {
+             temp = eval($scope.Output);
+        } catch (e) {
+            return;
+        }
+        $scope.Output = temp;
         if (!$scope.Output && $scope.Output != '0') {
             $scope.Output = "Infinity";
         }
