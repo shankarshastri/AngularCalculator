@@ -9,8 +9,15 @@ app.controller('angularCalcController', ['$scope', '$http', function($scope, $ht
         if (!$scope.flagCalc) {
             if ($scope.OutputCalc === '0')
                 $scope.OutputCalc = val;
-            else
-                $scope.OutputCalc += val;
+            else {
+                if (isNaN(val)) {
+                    if (!isNaN($scope.OutputCalc.charAt($scope.OutputCalc.length - 1)))
+                        $scope.OutputCalc += val;
+                } else {
+                    $scope.OutputCalc += val;
+                }
+            }
+
             $scope.Output = $scope.OutputCalc;
             console.log($scope.Output);
         } else {
@@ -36,7 +43,7 @@ app.controller('angularCalcController', ['$scope', '$http', function($scope, $ht
         $scope.flagCalc = true;
         console.log($scope.Output);
     };
-    
+
     $scope.clearOutput = function() {
         $scope.Output = '0';
         $scope.OutputCalc = '0';
