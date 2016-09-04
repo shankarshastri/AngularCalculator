@@ -1,0 +1,57 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Calculator</title>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://rawgit.com/angular/bower-angular/master/angular.min.js"></script>
+        <script src="core.js"></script>
+    </head>
+
+    <body ng-app="Angular_Calc">
+        <div ng-controller="angularCalcController">
+            <div style="margin-left:25%;margin-right:25%;width:70%;">
+                <div>
+                    <h1>
+                        Angular Calculator
+                    </h1>
+                </div>
+                <div class="row">
+                    <input type="text" class="col-xs-8 center-block" readonly ng-model="Output"></input>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('1');">1</div>
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('2');">2</div>
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('3');">3</div>
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('+');">+</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('4');">4</div>
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('5');">5</div>
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('6');">6</div>
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('-');">-</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('7');">7</div>
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('8');">8</div>
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('9');">9</div>
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('*');">*</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('0');">0</div>
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('.');">.</div>
+                    <div class="col-xs-2 center-block" ng-click="calcOutput('=');">=</div>
+                    <div class="col-xs-2 center-block" ng-click="pushOutput('/');">/</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8 center-block" ng-click="clearOutput();">Clear</div>                    
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,43 @@
+/* Large desktop */
+
+@media (min-width: 1200px) {
+  ...
+}
+
+
+/* Portrait tablet to landscape and desktop */
+
+@media (min-width: 768px) and (max-width: 979px) {
+  ...
+}
+
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {
+  ...
+}
+
+
+/* Landscape phones and down */
+
+@media (max-width: 480px) {
+  ...
+}
+
+.center-block {
+  text-align: center;
+  display: center;
+  background-color: #EDEDED;
+  border: 1px solid #fafafa;
+  padding: 4%;
+  zoom: 1;
+  transition: zoom 1.5s ease;
+}
+
+.center-block:hover {
+  background-color: #fafafa;
+  transition: background-color 0.4s ease-in-out;
+  z-index: 1;
+  zoom: 1.1;
+}
