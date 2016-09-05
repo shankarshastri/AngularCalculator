@@ -7,6 +7,7 @@
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href="style_animation.css" rel="stylesheet" type="text/css"/>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://rawgit.com/angular/bower-angular/master/angular.min.js"></script>
         <script src="core.js"></script>
@@ -17,11 +18,14 @@
             <div style="margin-left:25%;margin-right:25%;width:70%;">
                 <div>
                     <h1>
-                        Angular Calculator
+                        <p typewrite type-delay="100" blink-cursor="false" text="Angular Calculator"></p>
                     </h1>
                 </div>
-                <div class="row">
-                    <input type="text" style="background-color:white;border:2px solid #EDEDED;font-style:normal;" class="col-xs-8 center-block" readonly ng-model="Output"></input>
+                <div class="row" title="Output">
+                    <div style="background-color:white;border:2px solid #EDEDED;padding:4%;" class="col-xs-8">
+                        <input style="border: none;border-color: transparent;font-style:normal;margin-left: 25%;" class="output-block" type="text" readonly ng-model="Output"></input>
+                        <span class="blink_me output-block">|&nbsp</p>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-2 center-block" ng-click="pushOutput('1');">1</div>
